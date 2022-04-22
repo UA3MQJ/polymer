@@ -19,18 +19,14 @@ defmodule Reaction.ReactionTest do
     "SS" => "N",
     "SC" => "S",
     "CC" => "N",
-    "CN" => "C",
+    "CN" => "C"
   }
 
-  @tag :skip
   test "A" do
-    # assert 1588 ==
-    Reaction.run(@formula, @rules, 10)
+    assert 1588 == Reaction.run(@formula, @rules, 10)
   end
 
-  @tag :skip
   test "B" do
-    # assert 2_188_189_693_529 ==
-    Reaction.run(@formula, @rules, 40)
+    assert 2_188_189_693_529 == Reaction.run(@formula, @rules, 40)
   end
 end
